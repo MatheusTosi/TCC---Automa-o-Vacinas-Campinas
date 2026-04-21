@@ -214,3 +214,38 @@ Funcionalidade: Estabilidade do portal
   Cenário: Validar estabilidade do portal
     Dado que o usuário navega repetidamente entre as seções do portal
     Então o sistema deve manter comportamento estável durante a navegação
+
+Funcionalidade: Links institucionais e redes sociais no cabeçalho
+  Como usuário do portal
+  Quero acessar os links externos do cabeçalho
+  Para consultar os canais institucionais da Prefeitura de Campinas
+
+  # CT31
+  Cenário: Exibir os links externos do cabeçalho
+    Dado que o usuário acessa o portal de vacinação de Campinas
+    Quando a página inicial é carregada
+    Então o sistema deve exibir os links externos disponíveis no cabeçalho
+
+  # CT32
+  Cenário: Validar o link do Instagram no cabeçalho
+    Dado que o usuário acessa o portal de vacinação de Campinas
+    Quando o usuário localiza o link do Instagram no cabeçalho
+    Então o sistema deve apresentar um endereço de destino válido para o Instagram
+
+  # CT33
+  Cenário: Validar o link do Facebook no cabeçalho
+    Dado que o usuário acessa o portal de vacinação de Campinas
+    Quando o usuário localiza o link do Facebook no cabeçalho
+    Então o sistema deve apresentar um endereço de destino válido para o Facebook
+
+  # CT34
+  Cenário: Validar o link do YouTube no cabeçalho
+    Dado que o usuário acessa o portal de vacinação de Campinas
+    Quando o usuário localiza o link do YouTube no cabeçalho
+    Então o sistema deve apresentar um endereço de destino válido para o YouTube
+
+  # CT35
+  Cenário: Validar abertura de link externo a partir do cabeçalho
+    Dado que o usuário acessa o portal de vacinação de Campinas
+    Quando o usuário seleciona um link externo do cabeçalho
+    Então o sistema deve redirecionar corretamente para o destino configurado
