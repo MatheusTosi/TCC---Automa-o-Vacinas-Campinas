@@ -1,0 +1,216 @@
+# Projeto: TCC - Análise Técnica da Qualidade do Serviço de Informação sobre Vacinação da Prefeitura de Campinas
+# Arquivo de cenários BDD completos
+
+Funcionalidade: Acesso ao portal e navegação inicial
+  Como usuário do portal
+  Quero acessar o site e visualizar sua estrutura principal
+  Para iniciar a navegação pelas informações sobre vacinação
+
+  # CT01
+  Cenário: Carregar página inicial
+    Dado que o usuário acessa o portal de vacinação de Campinas
+    Quando a página é carregada
+    Então o sistema deve exibir o conteúdo principal da página inicial
+
+  # CT02
+  Cenário: Exibir menu lateral
+    Dado que o usuário está na página inicial
+    Então o sistema deve exibir o menu lateral de navegação
+
+  # CT03
+  Cenário: Navegar entre seções do menu
+    Dado que o usuário está na página inicial
+    Quando o usuário seleciona uma opção do menu lateral
+    Então o sistema deve redirecionar para a seção correspondente
+
+Funcionalidade: Qual vacina devo tomar
+  Como cidadão
+  Quero consultar orientações sobre vacinação
+  Para entender quais vacinas se aplicam ao meu perfil
+
+  # CT04
+  Cenário: Acessar Qual vacina tomar
+    Dado que o usuário está no portal
+    Quando o usuário expande o grupo "Qual vacina devo tomar"
+    Então o sistema deve exibir as opções internas do submenu
+
+  # CT05
+  Cenário: Exibir conteúdo da seção Qual vacina tomar
+    Dado que o usuário expandiu o grupo "Qual vacina devo tomar"
+    Quando o usuário acessa a opção "Vacina por idade e grupos"
+    Então o sistema deve exibir conteúdo informativo sobre vacinação por faixa etária e grupos
+
+  # CT06
+  Cenário: Validar legibilidade da seção Qual vacina tomar
+    Dado que o usuário acessa a seção "Vacina por idade e grupos"
+    Então o conteúdo apresentado deve estar legível e organizado visualmente
+
+Funcionalidade: Locais e horários das salas de vacinação
+  Como cidadão
+  Quero consultar unidades e horários
+  Para saber onde buscar atendimento vacinal
+
+  # CT07
+  Cenário: Acessar Locais e horários das salas de vacinação
+    Dado que o usuário está no portal
+    Quando o usuário seleciona a opção "Locais e horários das salas de vacinação"
+    Então o sistema deve carregar a página correspondente
+
+  # CT08
+  Cenário: Exibir unidades de vacinação
+    Dado que o usuário acessa a seção "Locais e horários das salas de vacinação"
+    Então o sistema deve exibir as unidades de saúde disponíveis
+
+  # CT09
+  Cenário: Exibir horários de funcionamento
+    Dado que o usuário acessa a seção "Locais e horários das salas de vacinação"
+    Então o sistema deve exibir os horários de funcionamento das salas de vacinação
+
+  # CT10
+  Cenário: Validar integridade dos dados de localização
+    Dado que o usuário acessa a seção "Locais e horários das salas de vacinação"
+    Então as informações de endereço e horário devem estar completas e consistentes
+
+Funcionalidade: Caderneta e comprovante de vacinação
+  Como cidadão
+  Quero consultar informações sobre documentação vacinal
+  Para acompanhar e comprovar minha situação vacinal
+
+  # CT11
+  Cenário: Acessar Caderneta e comprovante de vacinação
+    Dado que o usuário está no portal
+    Quando o usuário seleciona a opção "Caderneta e comprovante de vacinação"
+    Então o sistema deve carregar a página correspondente
+
+  # CT12
+  Cenário: Exibir informações sobre caderneta
+    Dado que o usuário acessa a seção "Caderneta e comprovante de vacinação"
+    Então o sistema deve apresentar orientações sobre caderneta e comprovantes de vacinação
+
+  # CT13
+  Cenário: Validar clareza das informações da caderneta
+    Dado que o usuário acessa a seção "Caderneta e comprovante de vacinação"
+    Então as informações devem estar claras e compreensíveis ao usuário
+
+Funcionalidade: Campanhas de vacinação
+  Como cidadão
+  Quero consultar campanhas vigentes
+  Para me manter informado sobre ações de imunização
+
+  # CT14
+  Cenário: Acessar Campanhas de vacinação
+    Dado que o usuário está no portal
+    Quando o usuário seleciona a opção "Campanhas de vacinação"
+    Então o sistema deve carregar a página correspondente
+
+  # CT15
+  Cenário: Exibir campanhas vigentes
+    Dado que o usuário acessa a seção "Campanhas de vacinação"
+    Então o sistema deve exibir informações sobre campanhas ativas ou divulgadas
+
+  # CT16
+  Cenário: Validar atualização das campanhas
+    Dado que o usuário acessa a seção "Campanhas de vacinação"
+    Então o conteúdo apresentado deve estar atualizado e coerente com o contexto exibido
+
+Funcionalidade: Vacina sem fake news
+  Como cidadão
+  Quero acessar conteúdo confiável
+  Para evitar desinformação relacionada à vacinação
+
+  # CT17
+  Cenário: Acessar Vacina sem fake news
+    Dado que o usuário está no portal
+    Quando o usuário seleciona a opção "Vacina sem fake news"
+    Então o sistema deve carregar a página correspondente
+
+  # CT18
+  Cenário: Exibir conteúdo educativo
+    Dado que o usuário acessa a seção "Vacina sem fake news"
+    Então o sistema deve apresentar conteúdo educativo sobre desinformação relacionada à vacinação
+
+  # CT19
+  Cenário: Validar organização do conteúdo educativo
+    Dado que o usuário acessa a seção "Vacina sem fake news"
+    Então o conteúdo deve estar organizado de forma lógica e compreensível
+
+Funcionalidade: Conteúdo para gestores e profissionais de saúde
+  Como profissional da área
+  Quero acessar conteúdo técnico
+  Para obter informações específicas do contexto de saúde pública
+
+  # CT20
+  Cenário: Acessar Conteúdo para gestores e profissionais
+    Dado que o usuário está no portal
+    Quando o usuário seleciona a opção "Conteúdo para gestores e profissionais de saúde"
+    Então o sistema deve carregar a página correspondente
+
+  # CT21
+  Cenário: Exibir conteúdo técnico
+    Dado que o usuário acessa a seção "Conteúdo para gestores e profissionais de saúde"
+    Então o sistema deve apresentar informações técnicas e institucionais
+
+  # CT22
+  Cenário: Validar segmentação do conteúdo técnico
+    Dado que o usuário acessa a seção "Conteúdo para gestores e profissionais de saúde"
+    Então o conteúdo deve estar coerente com o público-alvo da seção
+
+Funcionalidade: Navegação geral do portal
+  Como usuário
+  Quero navegar entre as páginas
+  Para acessar corretamente as informações do sistema
+
+  # CT23
+  Cenário: Validar carregamento das páginas
+    Dado que o usuário navega entre as seções do portal
+    Então cada página acessada deve carregar sem falhas visuais críticas
+
+  # CT24
+  Cenário: Validar presença de conteúdo nas páginas
+    Dado que o usuário acessa uma seção do portal
+    Então a página deve apresentar conteúdo informativo visível
+
+  # CT25
+  Cenário: Validar ausência de erros de navegação
+    Dado que o usuário navega entre diferentes seções do portal
+    Então o sistema não deve apresentar erros de navegação ou páginas indisponíveis
+
+Funcionalidade: Qualidade da informação
+  Como usuário
+  Quero visualizar informações de forma clara
+  Para compreender corretamente o conteúdo do portal
+
+  # CT26
+  Cenário: Validar legibilidade geral do portal
+    Dado que o usuário acessa qualquer seção do portal
+    Então o conteúdo textual deve estar legível
+
+  # CT27
+  Cenário: Validar organização das seções
+    Dado que o usuário acessa qualquer seção do portal
+    Então o conteúdo deve estar estruturado de forma lógica e organizada
+
+Funcionalidade: Integridade dos links e conteúdo
+  Como usuário
+  Quero acessar conteúdos consistentes
+  Para utilizar o portal sem encontrar falhas de estrutura
+
+  # CT28
+  Cenário: Validar funcionamento dos links internos
+    Dado que o usuário interage com os links internos do portal
+    Então os links devem redirecionar corretamente para o conteúdo esperado
+
+  # CT29
+  Cenário: Verificar ausência de conteúdo vazio
+    Dado que o usuário acessa uma seção principal do portal
+    Então a seção não deve apresentar conteúdo vazio ou incompleto
+
+Funcionalidade: Estabilidade do portal
+  Como usuário
+  Quero navegar com estabilidade
+  Para utilizar o sistema sem interrupções
+
+  # CT30
+  Cenário: Validar estabilidade do portal
+    Dado que o usuário navega repetidamente entre as seções do portal
+    Então o sistema deve manter comportamento estável durante a navegação
