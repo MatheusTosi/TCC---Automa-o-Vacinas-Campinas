@@ -215,37 +215,49 @@ Funcionalidade: Estabilidade do portal
     Dado que o usuário navega repetidamente entre as seções do portal
     Então o sistema deve manter comportamento estável durante a navegação
 
-Funcionalidade: Links institucionais e redes sociais no cabeçalho
+Funcionalidade: Links institucionais e sociais no cabeçalho
   Como usuário do portal
-  Quero acessar os links externos do cabeçalho
-  Para consultar os canais institucionais da Prefeitura de Campinas
+  Quero acessar os links disponíveis no cabeçalho
+  Para consultar canais institucionais e redes oficiais da Prefeitura
 
   # CT31
-  Cenário: Exibir os links externos do cabeçalho
+  Cenário: Exibir os links institucionais no cabeçalho
     Dado que o usuário acessa o portal de vacinação de Campinas
     Quando a página inicial é carregada
-    Então o sistema deve exibir os links externos disponíveis no cabeçalho
+    Então o sistema deve exibir os links institucionais do cabeçalho
 
   # CT32
-  Cenário: Validar o link do Instagram no cabeçalho
+  Cenário: Exibir os links de redes sociais no cabeçalho
     Dado que o usuário acessa o portal de vacinação de Campinas
-    Quando o usuário localiza o link do Instagram no cabeçalho
-    Então o sistema deve apresentar um endereço de destino válido para o Instagram
+    Quando a página inicial é carregada
+    Então o sistema deve exibir os links das redes sociais no cabeçalho
 
   # CT33
   Cenário: Validar o link do Facebook no cabeçalho
     Dado que o usuário acessa o portal de vacinação de Campinas
     Quando o usuário localiza o link do Facebook no cabeçalho
-    Então o sistema deve apresentar um endereço de destino válido para o Facebook
+    Então o sistema deve apresentar um endereço de destino válido para o Facebook oficial
 
   # CT34
   Cenário: Validar o link do YouTube no cabeçalho
     Dado que o usuário acessa o portal de vacinação de Campinas
     Quando o usuário localiza o link do YouTube no cabeçalho
-    Então o sistema deve apresentar um endereço de destino válido para o YouTube
+    Então o sistema deve apresentar um endereço de destino válido para o canal oficial
 
   # CT35
-  Cenário: Validar abertura de link externo a partir do cabeçalho
+  Cenário: Validar o link do Instagram no cabeçalho
     Dado que o usuário acessa o portal de vacinação de Campinas
-    Quando o usuário seleciona um link externo do cabeçalho
-    Então o sistema deve redirecionar corretamente para o destino configurado
+    Quando o usuário localiza o link do Instagram no cabeçalho
+    Então o sistema deve apresentar um endereço de destino válido para o Instagram oficial
+
+  # CT36
+  Cenário: Validar o link da galeria de fotos no cabeçalho
+    Dado que o usuário acessa o portal de vacinação de Campinas
+    Quando o usuário localiza o link de fotos no cabeçalho
+    Então o sistema deve apresentar um endereço de destino válido para a galeria oficial
+
+  # CT37
+  Cenário: Validar o link de Diário Oficial no cabeçalho
+    Dado que o usuário acessa o portal de vacinação de Campinas
+    Quando o usuário localiza o link "Diário Oficial" no cabeçalho
+    Então o sistema deve apresentar um endereço de destino válido para a página correspondente
